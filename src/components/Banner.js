@@ -11,15 +11,6 @@ export const Banner = () => {
   
   const [selectedDate, setSelectedDate] = useState(simpleDateFormat);
   const [filterUser, setFilterUser] = useState([]);
-  
-  
-  
-
-
-
-  
-
-
   const handeSearchChange = (e) => {
     const search = e.target.value.toLowerCase();
     const filteredUser = data.filter((datas) =>
