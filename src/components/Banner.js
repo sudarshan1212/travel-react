@@ -8,47 +8,17 @@ export const Banner = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const dateString = new Date().toString();
-  const date = new Date(dateString);
-  const year = date.getFullYear();
-  const month = date.getMonth() + 1; // Adding 1 to get month in the range 1-12
-  const day = date.getDate();
-  const simpleDateFormat = `${year}-${month < 10 ? "0" : ""}${month}-${
-    day < 10 ? "0" : ""
-  }${day}`;
+  
   const [selectedDate, setSelectedDate] = useState(simpleDateFormat);
   const [filterUser, setFilterUser] = useState([]);
-  const depatrueDate = new Date(selectedDate);
-  const resultDepatureDate = new Date(depatrueDate);
-  resultDepatureDate.setDate(depatrueDate.getDate() + 5);
-  const optionss = {
-    weekday: "long",
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  };
-  const formattedDepatureResult = resultDepatureDate
-    .toLocaleDateString("en-US", optionss)
-    .split("-")
-    .join("");
-  let depatureDate = formattedDepatureResult.split(",");
-  // console.log(depatureDate);
+  
+  
+  
 
-  const clickedDate = new Date(selectedDate);
-  const resultDate = new Date(clickedDate);
-  resultDate.setDate(clickedDate.getDate());
-  const options = {
-    weekday: "long",
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  };
-  let formattedResult = resultDate
-    .toLocaleDateString("en-US", options)
-    .split("-")
-    .join("");
-  let returnDate = formattedResult.split(",");
-  // console.log(formattedResult.split(",")[0]); // Output: "
+
+
+  
+
 
   const handeSearchChange = (e) => {
     const search = e.target.value.toLowerCase();
